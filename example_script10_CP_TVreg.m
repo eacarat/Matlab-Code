@@ -164,7 +164,7 @@ legend('mode 1', 'mode 2','mode 3')
 sgtitle('convergence AO-ADMM')
 %%
 [fmsA,Atrue_normalized] = score(ktensor(ones(3,1),Atrue{1}),ktensor(ones(3,1),Zhat{1}.U{1}),'lambda_penalty',false);
-
+Zhat{1} = normalize(Zhat{1});
 figure()
 for r=1:3
     subplot(1,3,r)
